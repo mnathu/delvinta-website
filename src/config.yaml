@@ -9,19 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: DELVINTA Technologies
+    template: '%s — DELVINTA Technologies'
+
+  description: 'Healthcare integration, interoperability, and diagnostic systems technology solutions.'
+
   robots:
     index: true
     follow: true
+
   openGraph:
-    site_name: AstroWind
+    site_name: DELVINTA Technologies
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
-    type: website
+        type: website
   twitter:
     handle: '@arthelokyo'
     site: '@arthelokyo'
