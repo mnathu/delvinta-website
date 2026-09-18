@@ -2,271 +2,158 @@
 import Layout from '~/layouts/Layout.astro';
 import '~/styles/delvinta.css';
 
-const solutions = [
+const integrationCapabilities = [
   {
-    number: '01',
-    title: 'Healthcare Integration',
-    description:
-      'Connect EHRs, clinical applications, interfaces, and downstream systems with integration architecture designed around real healthcare workflows.',
+    title: 'EPIC BEAKER',
+    items: 'Implementation · Conversion · Testing · Go-Live',
   },
   {
-    number: '02',
-    title: 'Diagnostic Systems',
-    description:
-      'Bring laboratory information systems, analyzers, instruments, and diagnostic platforms together with dependable connectivity and operational visibility.',
+    title: 'INTEGRATION',
+    items: 'Data Innovations · Instruments · Middleware · Automation',
   },
   {
-    number: '03',
-    title: 'Integration Intelligence',
-    description:
-      'Turn interface activity and operational signals into actionable insight so support teams can identify problems faster and keep clinical systems moving.',
+    title: 'OPTIMIZATION',
+    items: 'Support · Quality Control · Autoverification · Monitoring',
   },
 ];
 
-const services = [
-  {
-    title: 'Consulting',
-    description:
-      'Specialized expertise for healthcare interoperability, LIS/LIMS, medical device integration, and complex interface environments.',
-  },
-  {
-    title: 'Managed Integration',
-    description:
-      'Ongoing monitoring, troubleshooting, optimization, and operational support for critical integration environments.',
-  },
-  {
-    title: 'Implementation & Optimization',
-    description:
-      'From new interfaces to system modernization, improve reliability, performance, and the experience of the teams who support them.',
-  },
-];
+const lifecycle = ['Plan', 'Build', 'Integrate', 'Test', 'Go-Live', 'Stabilize', 'Support', 'Optimize'];
 
-const industries = ['Health Systems', 'Clinical Laboratories', 'Diagnostic Networks'];
+const integrationLayer = ['Epic Beaker', 'Data Innovations', 'Instruments', 'Middleware', 'Automation'];
 ---
 
 <Layout>
-  <main>
-    <!-- HERO -->
-    <section class="relative overflow-hidden bg-white">
-      <div class="absolute inset-0 delvinta-grid opacity-70"></div>
+  <!-- HERO -->
+  <section class="delvinta-section relative overflow-hidden">
+    <div class="delvinta-container">
+      <div class="grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+        <div>
+          <p class="delvinta-eyebrow">Laboratory Integration &amp; Transformation</p>
 
-      <div class="delvinta-container relative">
-        <div class="grid min-h-[720px] items-center gap-14 py-24 lg:grid-cols-[1fr_0.9fr] lg:py-28">
-          <div>
-            <div class="delvinta-eyebrow">Healthcare Integration Technology</div>
+          <h1 class="delvinta-heading mt-5 max-w-3xl">
+            Transforming the laboratory.
+            <span class="delvinta-heading-subtitle block"> Delivering integration solutions. </span>
+          </h1>
 
-            <h1 class="delvinta-heading">
-              Healthcare integration,
-              <span class="text-[var(--delvinta-blue)]">engineered for what's next.</span>
-            </h1>
-
-            <p class="delvinta-body mt-7">
-              DELVINTA Technologies helps health systems connect, monitor, and optimize the clinical and diagnostic
-              systems that keep patient care moving.
-            </p>
-
-            <div class="mt-9 flex flex-wrap gap-3">
-              <a href="/services" class="delvinta-button delvinta-button-primary">
-                Explore Solutions
-                <span class="ml-2" aria-hidden="true">→</span>
-              </a>
-
-              <a href="/contact" class="delvinta-button delvinta-button-secondary"> Let's Talk </a>
-            </div>
-
-            <div class="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-[var(--delvinta-slate)]">
-              <span>Epic &amp; LIS</span>
-              <span>Medical Devices</span>
-              <span>HL7 Integration</span>
-              <span>Diagnostic Systems</span>
-            </div>
-          </div>
-
-          <div class="delvinta-network shadow-2xl shadow-slate-300/20">
-            <div class="absolute left-7 top-7 z-10">
-              <div class="delvinta-kicker">Integration Network</div>
-              <div class="mt-2 text-sm text-white/70">Systems connected. Data moving.</div>
-            </div>
-
-            <div class="delvinta-line delvinta-line-v delvinta-line-v-top"></div>
-            <div class="delvinta-line delvinta-line-v delvinta-line-v-bottom"></div>
-            <div class="delvinta-line delvinta-line-h delvinta-line-h-left"></div>
-            <div class="delvinta-line delvinta-line-h delvinta-line-h-right"></div>
-
-            <div class="delvinta-node delvinta-node-top">EHR / Epic</div>
-            <div class="delvinta-node delvinta-node-left">Laboratory</div>
-
-            <div class="delvinta-node delvinta-node-center">
-              <div class="text-center">
-                <div class="text-xs font-medium uppercase tracking-[0.18em] text-cyan-200">DELVINTA</div>
-                <div class="mt-1 text-base font-semibold">Integration</div>
-              </div>
-            </div>
-
-            <div class="delvinta-node delvinta-node-right">Medical Devices</div>
-            <div class="delvinta-node delvinta-node-bottom">Clinical Data</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- POSITIONING -->
-    <section class="delvinta-section border-y border-[var(--delvinta-border)] bg-[var(--delvinta-light)]">
-      <div class="delvinta-container">
-        <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-          <div>
-            <div class="delvinta-eyebrow">Built Around the Workflow</div>
-
-            <h2 class="delvinta-heading-small">Integration is infrastructure for patient care.</h2>
-          </div>
-
-          <div>
-            <p class="delvinta-body">
-              Healthcare organizations depend on a web of systems that must communicate reliably every minute of every
-              day. DELVINTA focuses on the layer where those systems meet—making complex integration environments easier
-              to implement, support, monitor, and improve.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOLUTIONS -->
-    <section class="delvinta-section">
-      <div class="delvinta-container">
-        <div class="max-w-3xl">
-          <div class="delvinta-eyebrow">Solutions</div>
-
-          <h2 class="delvinta-heading-small">Specialized technology for connected healthcare.</h2>
-
-          <p class="delvinta-body mt-6">
-            Practical solutions for the systems, interfaces, and operational challenges behind modern clinical
-            environments.
+          <p class="delvinta-body mt-6 max-w-2xl">
+            Specialized integration expertise for Epic Beaker, Data Innovations Instrument Manager, diagnostic
+            instruments, middleware, and laboratory automation.
           </p>
+
+          <div class="mt-8">
+            <a href="#contact" class="delvinta-button delvinta-button-primary"> Talk to DELVINTA </a>
+          </div>
         </div>
 
-        <div class="mt-14 grid gap-5 md:grid-cols-3">
-          {
-            solutions.map((solution) => (
-              <article class="delvinta-card">
-                <div class="text-xs font-bold tracking-[0.15em] text-[var(--delvinta-cyan)]">{solution.number}</div>
+        <!-- Integration Architecture -->
+        <div class="delvinta-network min-h-[360px]">
+          <div class="delvinta-node delvinta-node-laboratory">Laboratory</div>
 
-                <h3 class="mt-8 text-xl font-semibold tracking-tight text-[var(--delvinta-navy)]">{solution.title}</h3>
+          <div class="delvinta-node delvinta-node-delvinta">DELVINTA Integration</div>
 
-                <p class="mt-4 text-sm leading-7 text-[var(--delvinta-slate)]">{solution.description}</p>
+          <div class="delvinta-node delvinta-node-data">Data Innovations</div>
 
-                <a
-                  href="/services"
-                  class="mt-7 inline-flex items-center text-sm font-semibold text-[var(--delvinta-blue)]"
-                >
-                  Learn more
-                  <span class="ml-2" aria-hidden="true">
-                    →
-                  </span>
-                </a>
-              </article>
-            ))
-          }
+          <div class="delvinta-node delvinta-node-epic">Epic Beaker</div>
+
+          <div class="delvinta-node delvinta-node-instruments">Instruments &amp; Automation</div>
+
+          <div class="delvinta-line delvinta-line-main"></div>
+          <div class="delvinta-line delvinta-line-epic"></div>
+          <div class="delvinta-line delvinta-line-instruments"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SERVICES -->
-    <section class="delvinta-section bg-[var(--delvinta-navy-deep)] text-white">
-      <div class="delvinta-container">
-        <div class="grid gap-14 lg:grid-cols-[0.75fr_1.25fr]">
-          <div>
-            <div class="delvinta-eyebrow text-cyan-300">Services</div>
+  <!-- LABORATORY INTEGRATION -->
+  <section class="delvinta-section bg-[var(--delvinta-light)]">
+    <div class="delvinta-container">
+      <div class="max-w-3xl">
+        <p class="delvinta-eyebrow">Laboratory Integration</p>
 
-            <h2 class="max-w-xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-              Expertise where healthcare technology gets complicated.
-            </h2>
+        <h2 class="delvinta-heading-small mt-3">From implementation to optimization.</h2>
 
-            <p class="mt-6 max-w-lg text-base leading-7 text-white/65">
-              DELVINTA brings hands-on integration experience to environments where reliability, interoperability, and
-              operational knowledge matter.
-            </p>
-          </div>
+        <p class="delvinta-body mt-5">
+          DELVINTA connects the systems, instruments, and workflows that keep the laboratory moving.
+        </p>
+      </div>
 
-          <div class="grid gap-4">
+      <!-- Compact capability rows -->
+      <div class="mt-10 border-t border-[var(--delvinta-border)]">
+        {
+          integrationCapabilities.map((capability) => (
+            <div class="grid gap-2 border-b border-[var(--delvinta-border)] py-5 sm:grid-cols-[180px_1fr] sm:items-center sm:gap-8">
+              <h3 class="text-sm font-bold tracking-widest text-[var(--delvinta-navy)]">{capability.title}</h3>
+
+              <p class="text-sm leading-6 text-[var(--delvinta-slate)]">{capability.items}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Integration lifecycle -->
+      <div class="mt-8">
+        <p class="text-xs font-semibold tracking-widest text-[var(--delvinta-teal)]">INTEGRATION LIFECYCLE</p>
+
+        <p class="mt-3 text-sm font-medium tracking-wide text-[var(--delvinta-slate)]">
+          {lifecycle.join(' → ')}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL CENTERPIECE -->
+  <section class="relative overflow-hidden bg-[var(--delvinta-navy-deep)] py-20 text-white sm:py-24">
+    <div class="delvinta-container">
+      <div class="max-w-4xl">
+        <p class="delvinta-eyebrow text-[var(--delvinta-cyan)]">DELVINTA Integration</p>
+
+        <h2 class="mt-4 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
+          Connecting the laboratory to the systems that power it.
+        </h2>
+
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+          From implementation and integration through stabilization and optimization, we bring together laboratory
+          workflows, instruments, middleware, automation, and clinical systems through disciplined technical expertise.
+        </p>
+
+        <!-- Capability line -->
+        <div class="mt-10 border-t border-white/10 pt-6">
+          <p class="text-xs font-semibold tracking-widest text-[var(--delvinta-cyan)]">CONNECTED TECHNOLOGY</p>
+
+          <div class="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm font-medium text-slate-200">
             {
-              services.map((service, index) => (
-                <article class="grid gap-5 rounded-xl border border-white/10 bg-white/[0.035] p-7 transition hover:border-cyan-300/30 hover:bg-white/[0.055] sm:grid-cols-[70px_1fr]">
-                  <div class="text-sm font-semibold text-cyan-300">0{index + 1}</div>
-
-                  <div>
-                    <h3 class="text-xl font-semibold">{service.title}</h3>
-                    <p class="mt-3 max-w-2xl text-sm leading-7 text-white/60">{service.description}</p>
-                  </div>
-                </article>
+              integrationLayer.map((item, index) => (
+                <>
+                  <span>{item}</span>
+                  {index < integrationLayer.length - 1 && (
+                    <span class="text-white/25" aria-hidden="true">
+                      ·
+                    </span>
+                  )}
+                </>
               ))
             }
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- INDUSTRIES -->
-    <section class="delvinta-section">
-      <div class="delvinta-container">
-        <div class="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-end">
-          <div>
-            <div class="delvinta-eyebrow">Industries</div>
+  <!-- CTA -->
+  <section id="contact" class="delvinta-section">
+    <div class="delvinta-container">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="delvinta-eyebrow">Let's Talk</p>
 
-            <h2 class="delvinta-heading-small">Deep experience in the environments we serve.</h2>
-          </div>
+        <h2 class="delvinta-heading-small mt-3">Have a laboratory integration challenge?</h2>
 
-          <p class="delvinta-body lg:ml-auto">
-            Our focus is healthcare technology where systems, devices, data, and people have to work together without
-            compromise.
-          </p>
-        </div>
+        <p class="delvinta-body mt-5">Implementation. Integration. Support. Optimization.</p>
 
-        <div class="mt-12 grid border-y border-[var(--delvinta-border)] sm:grid-cols-3">
-          {
-            industries.map((industry, index) => (
-              <div
-                class:list={[
-                  'px-6 py-8 sm:px-8',
-                  index !== 0 && 'border-t sm:border-l sm:border-t-0 border-[var(--delvinta-border)]',
-                ]}
-              >
-                <div class="text-xs font-bold tracking-[0.15em] text-[var(--delvinta-cyan)]">0{index + 1}</div>
-
-                <h3 class="mt-5 text-lg font-semibold text-[var(--delvinta-navy)]">{industry}</h3>
-              </div>
-            ))
-          }
+        <div class="mt-8">
+          <a href="mailto:hello@delvinta.com" class="delvinta-button delvinta-button-primary"> Talk to DELVINTA </a>
         </div>
       </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="pb-24">
-      <div class="delvinta-container">
-        <div class="delvinta-cta px-8 py-14 sm:px-12 sm:py-16">
-          <div class="relative z-10 max-w-3xl">
-            <div class="text-xs font-bold uppercase tracking-[0.16em] text-cyan-300">Start a Conversation</div>
-
-            <h2 class="mt-5 text-3xl font-bold tracking-tight sm:text-5xl">
-              Let's make healthcare systems work better together.
-            </h2>
-
-            <p class="mt-5 max-w-2xl text-base leading-7 text-white/65">
-              Whether you're solving an integration challenge, modernizing a diagnostic environment, or planning what's
-              next, let's talk.
-            </p>
-
-            <a
-              href="/contact"
-              class="mt-8 inline-flex items-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-[var(--delvinta-navy)] transition hover:-translate-y-0.5"
-            >
-              Let's Talk
-              <span class="ml-2" aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-</Layout>n
+    </div>
+  </section>
+</Layout>

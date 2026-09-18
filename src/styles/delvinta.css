@@ -71,6 +71,15 @@ body {
   font-weight: 700;
 }
 
+.delvinta-heading-subtitle {
+  margin-top: 0.35rem;
+  color: var(--delvinta-slate);
+  font-size: 0.62em;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
 .delvinta-heading-small {
   max-width: 720px;
   font-size: clamp(2rem, 4vw, 3.2rem);
@@ -163,123 +172,110 @@ body {
   background-size: 42px 42px;
 }
 
+/* DELVINTA Integration Architecture */
+
 .delvinta-network {
   position: relative;
+  width: 100%;
+  min-height: 360px;
   overflow: hidden;
-  min-height: 440px;
-  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2rem;
   background:
-    radial-gradient(circle at 72% 25%, rgba(57, 169, 198, 0.2), transparent 28%),
-    radial-gradient(circle at 25% 75%, rgba(20, 125, 135, 0.16), transparent 30%), var(--delvinta-navy-deep);
-}
-
-.delvinta-network::before,
-.delvinta-network::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+    radial-gradient(circle at 72% 38%, rgba(57, 169, 198, 0.18), transparent 28%),
+    radial-gradient(circle at 28% 72%, rgba(20, 125, 135, 0.12), transparent 30%),
+    linear-gradient(135deg, var(--delvinta-navy-deep), #0b2638);
 }
 
 .delvinta-network::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
-}
-
-.delvinta-network::after {
-  background: linear-gradient(135deg, transparent 0%, rgba(57, 169, 198, 0.08) 50%, transparent 100%);
+  pointer-events: none;
 }
 
 .delvinta-node {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 132px;
-  min-height: 58px;
-  padding: 10px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.07);
+  min-height: 52px;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
   color: white;
-  backdrop-filter: blur(10px);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
 }
 
-.delvinta-node-center {
-  left: 50%;
+.delvinta-node-laboratory {
+  left: 2%;
   top: 50%;
-  min-width: 170px;
-  min-height: 76px;
+  transform: translateY(-50%);
+}
+
+.delvinta-node-delvinta {
+  left: 44%;
+  top: 50%;
   transform: translate(-50%, -50%);
+  background: rgba(57, 169, 198, 0.16);
   border-color: rgba(57, 169, 198, 0.55);
-  background: rgba(57, 169, 198, 0.13);
-  box-shadow: 0 0 45px rgba(57, 169, 198, 0.16);
+  box-shadow: 0 0 35px rgba(57, 169, 198, 0.12);
 }
 
-.delvinta-node-top {
-  left: 50%;
-  top: 12%;
-  transform: translateX(-50%);
-}
-
-.delvinta-node-left {
-  left: 8%;
+.delvinta-node-data {
+  left: 70%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.delvinta-node-right {
-  right: 8%;
-  top: 50%;
-  transform: translateY(-50%);
+.delvinta-node-epic {
+  left: 70%;
+  top: 18%;
+  transform: translate(-50%, -50%);
 }
 
-.delvinta-node-bottom {
-  left: 50%;
-  bottom: 12%;
-  transform: translateX(-50%);
+.delvinta-node-instruments {
+  left: 70%;
+  top: 82%;
+  transform: translate(-50%, -50%);
 }
 
 .delvinta-line {
   position: absolute;
-  z-index: 1;
-  background: rgba(57, 169, 198, 0.35);
+  z-index: 2;
+  background: rgba(57, 169, 198, 0.6);
 }
 
-.delvinta-line-v {
-  left: 50%;
-  width: 1px;
-  height: 38%;
+.delvinta-line-main {
+  left: 13%;
+  top: 50%;
+  width: 58%;
+  height: 2px;
+}
+
+.delvinta-line-epic {
+  left: 70%;
+  top: 18%;
+  width: 2px;
+  height: 64%;
   transform: translateX(-50%);
 }
 
-.delvinta-line-v-top {
-  top: 21%;
-}
-
-.delvinta-line-v-bottom {
-  bottom: 21%;
-}
-
-.delvinta-line-h {
-  top: 50%;
-  width: 38%;
-  height: 1px;
-  transform: translateY(-50%);
-}
-
-.delvinta-line-h-left {
-  left: 21%;
-}
-
-.delvinta-line-h-right {
-  right: 21%;
+.delvinta-line-instruments {
+  display: none;
 }
 
 .delvinta-kicker {
@@ -300,12 +296,12 @@ body {
 .delvinta-cta::after {
   content: '';
   position: absolute;
+  top: -180px;
+  right: -140px;
   width: 380px;
   height: 380px;
-  right: -140px;
-  top: -180px;
-  border-radius: 50%;
   border: 1px solid rgba(57, 169, 198, 0.22);
+  border-radius: 50%;
   box-shadow:
     0 0 0 45px rgba(57, 169, 198, 0.035),
     0 0 0 90px rgba(57, 169, 198, 0.025);
@@ -313,7 +309,7 @@ body {
 
 @media (max-width: 768px) {
   .delvinta-section {
-    padding-block: 70px;
+    padding-block: 48px;
   }
 
   .delvinta-container {
@@ -321,23 +317,46 @@ body {
   }
 
   .delvinta-network {
-    min-height: 380px;
+    min-height: 300px;
+    border-radius: 1.5rem;
   }
 
   .delvinta-node {
-    min-width: 105px;
-    font-size: 0.7rem;
+    min-height: 44px;
+    padding: 0.6rem 0.7rem;
+    font-size: 0.68rem;
   }
 
-  .delvinta-node-center {
-    min-width: 140px;
+  .delvinta-node-laboratory {
+    left: 4%;
   }
 
-  .delvinta-node-left {
-    left: 3%;
+  .delvinta-node-delvinta {
+    left: 43%;
   }
 
-  .delvinta-node-right {
-    right: 3%;
+  .delvinta-node-data {
+    left: 82%;
+  }
+
+  .delvinta-node-epic {
+    left: 82%;
+    top: 20%;
+  }
+
+  .delvinta-node-instruments {
+    left: 82%;
+    top: 80%;
+  }
+
+  .delvinta-line-main {
+    left: 10%;
+    width: 72%;
+  }
+
+  .delvinta-line-epic {
+    left: 82%;
+    top: 20%;
+    height: 60%;
   }
 }
