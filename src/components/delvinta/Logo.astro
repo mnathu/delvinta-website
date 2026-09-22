@@ -1,0 +1,19 @@
+---
+import delvintaIcon from '~/assets/favicons/favicon.svg';
+
+interface Props {
+  href?: string;
+}
+
+const { href = '/' } = Astro.props;
+---
+
+<a href={href} class="inline-flex items-center whitespace-nowrap" aria-label="DELVINTA Technologies home">
+  <img src={delvintaIcon.src} alt="" width="40" height="40" class="mr-2.5 h-9 w-9 md:h-10 md:w-10" aria-hidden="true" />
+
+  <span class="inline-flex items-baseline">
+    <span class="text-2xl font-bold tracking-tight text-[var(--delvinta-navy)] md:text-3xl"> DELVINTA </span>
+
+    <span class="ml-1.5 text-xs font-medium tracking-wide text-[var(--delvinta-slate)] md:text-sm"> Technologies </span>
+  </span>
+</a>

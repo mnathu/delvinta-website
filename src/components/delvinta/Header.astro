@@ -1,0 +1,134 @@
+---
+import Logo from './Logo.astro';
+---
+
+<header class="sticky top-0 z-50 border-b border-[var(--delvinta-border)] bg-white/95 backdrop-blur">
+  <div class="delvinta-container">
+    <div class="flex h-20 items-center justify-between">
+      <!-- Logo -->
+      <Logo />
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden items-center gap-8 md:flex" aria-label="Main navigation">
+        <a
+          href="#capabilities"
+          class="text-sm font-medium text-[var(--delvinta-slate)] transition-colors hover:text-[var(--delvinta-navy)]"
+        >
+          Capabilities
+        </a>
+
+        <a
+          href="#approach"
+          class="text-sm font-medium text-[var(--delvinta-slate)] transition-colors hover:text-[var(--delvinta-navy)]"
+        >
+          Approach
+        </a>
+
+        <a
+          href="#about"
+          class="text-sm font-medium text-[var(--delvinta-slate)] transition-colors hover:text-[var(--delvinta-navy)]"
+        >
+          About
+        </a>
+
+        <a
+          href="#contact"
+          class="text-sm font-medium text-[var(--delvinta-slate)] transition-colors hover:text-[var(--delvinta-navy)]"
+        >
+          Contact
+        </a>
+
+        <a href="#contact" class="delvinta-button delvinta-button-primary min-h-[42px] px-5"> Talk to DELVINTA </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        type="button"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[var(--delvinta-border)] text-[var(--delvinta-navy)] transition-colors hover:bg-[var(--delvinta-light)] md:hidden"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-navigation"
+        data-menu-button
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M4 6h16"></path>
+          <path d="M4 12h16"></path>
+          <path d="M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-navigation"
+      class="hidden border-t border-[var(--delvinta-border)] py-5 md:hidden"
+      data-mobile-navigation
+    >
+      <nav class="flex flex-col" aria-label="Mobile navigation">
+        <a
+          href="#capabilities"
+          class="border-b border-[var(--delvinta-border)] py-4 text-sm font-medium text-[var(--delvinta-navy)]"
+          data-mobile-link
+        >
+          Capabilities
+        </a>
+
+        <a
+          href="#approach"
+          class="border-b border-[var(--delvinta-border)] py-4 text-sm font-medium text-[var(--delvinta-navy)]"
+          data-mobile-link
+        >
+          Approach
+        </a>
+
+        <a
+          href="#about"
+          class="border-b border-[var(--delvinta-border)] py-4 text-sm font-medium text-[var(--delvinta-navy)]"
+          data-mobile-link
+        >
+          About
+        </a>
+
+        <a href="#contact" class="py-4 text-sm font-medium text-[var(--delvinta-navy)]" data-mobile-link> Contact </a>
+
+        <a href="#contact" class="delvinta-button delvinta-button-primary mt-4 w-full" data-mobile-link>
+          Talk to DELVINTA
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  const menuButton = document.querySelector('[data-menu-button]');
+  const mobileNavigation = document.querySelector('[data-mobile-navigation]');
+  const mobileLinks = document.querySelectorAll('[data-mobile-link]');
+
+  if (menuButton instanceof HTMLButtonElement && mobileNavigation) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = !mobileNavigation.classList.contains('hidden');
+
+      mobileNavigation.classList.toggle('hidden');
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+    });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileNavigation.classList.add('hidden');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation menu');
+      });
+    });
+  }
+</script>
