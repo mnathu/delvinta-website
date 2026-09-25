@@ -1,81 +1,140 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-
-const metadata = {
-  title: 'Contact',
-  description:
-    'Contact page demo built with AstroWind: a form, contact details and support links in one accessible layout.',
-};
+import Layout from '~/layouts/Layout.astro';
 ---
 
-<Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+<Layout
+  metadata={{
+    title: 'Contact | DELVINTA Technologies',
+    description:
+      'Contact DELVINTA Technologies to discuss laboratory integration, Epic Beaker, Data Innovations, instrument interfaces, automation, support, and optimization.',
+  }}
+>
+  <!-- HERO -->
+  <section class="delvinta-section pt-16 md:pt-24">
+    <div class="delvinta-container">
+      <div class="max-w-4xl">
+        <div class="delvinta-eyebrow">Let&apos;s Talk</div>
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+        <h1 class="delvinta-heading mt-6">
+          Have a laboratory
+          <span class="delvinta-heading-subtitle block">integration challenge?</span>
+        </h1>
 
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  />
+        <p class="delvinta-body mt-7 max-w-2xl">
+          Whether you are planning an Epic Beaker implementation, working through instrument integration, or optimizing
+          an existing laboratory environment, let&apos;s talk about how DELVINTA can help.
+        </p>
 
-  <!-- Features2 Widget ************** -->
+        <div class="mt-8">
+          <a href="mailto:hello@delvinta.com" class="delvinta-button delvinta-button-primary"> Email DELVINTA </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <Features2
-    title="We are here to help!"
-    items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
+  <!-- WAYS WE CAN HELP -->
+  <section class="delvinta-section bg-[var(--delvinta-light)]">
+    <div class="delvinta-container">
+      <div class="max-w-3xl">
+        <div class="delvinta-eyebrow">How We Can Help</div>
+
+        <h2 class="delvinta-heading-small mt-4">Start with the challenge.</h2>
+
+        <p class="delvinta-body mt-5">
+          You do not need to have the integration plan figured out before reaching out. We can start with the problem
+          and work from there.
+        </p>
+      </div>
+
+      <div class="mt-10 divide-y divide-[var(--delvinta-border)] border-y border-[var(--delvinta-border)]">
+        <!-- Implementation -->
+        <div class="grid gap-3 py-6 md:grid-cols-[220px_1fr] md:gap-10">
+          <div class="text-lg font-semibold tracking-tight text-[var(--delvinta-navy)]">Implementation</div>
+
+          <p class="text-sm leading-7 text-[var(--delvinta-slate)]">
+            Epic Beaker implementation, laboratory conversion, instrument integration, testing, go-live, and
+            stabilization.
+          </p>
+        </div>
+
+        <!-- Integration -->
+        <div class="grid gap-3 py-6 md:grid-cols-[220px_1fr] md:gap-10">
+          <div class="text-lg font-semibold tracking-tight text-[var(--delvinta-navy)]">Integration</div>
+
+          <p class="text-sm leading-7 text-[var(--delvinta-slate)]">
+            Data Innovations, diagnostic instruments, vendor middleware, laboratory automation, and interface
+            integration.
+          </p>
+        </div>
+
+        <!-- Optimization -->
+        <div class="grid gap-3 py-6 md:grid-cols-[220px_1fr] md:gap-10">
+          <div class="text-lg font-semibold tracking-tight text-[var(--delvinta-navy)]">Optimization</div>
+
+          <p class="text-sm leading-7 text-[var(--delvinta-slate)]">
+            Ongoing support, quality control integration, autoverification, monitoring, and laboratory workflow
+            optimization.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="delvinta-section">
+    <div class="delvinta-container">
+      <div class="grid gap-12 lg:grid-cols-[1fr_0.8fr] lg:items-center lg:gap-20">
+        <div>
+          <div class="delvinta-eyebrow">Connect With Us</div>
+
+          <h2 class="delvinta-heading-small mt-4">Let&apos;s start a conversation.</h2>
+
+          <p class="delvinta-body mt-5">
+            Tell us what you are working on, where you are encountering challenges, or what you are planning next.
+            We&apos;ll take it from there.
+          </p>
+        </div>
+
+        <div class="delvinta-card">
+          <div class="delvinta-capability-tag">Email</div>
+
+          <h3 class="mt-5 text-2xl font-semibold tracking-tight text-[var(--delvinta-navy)]">hello@delvinta.com</h3>
+
+          <p class="mt-3 text-sm leading-6 text-[var(--delvinta-slate)]">
+            The easiest way to reach DELVINTA is by email.
+          </p>
+
+          <div class="mt-6">
+            <a href="mailto:hello@delvinta.com" class="delvinta-button delvinta-button-primary w-full">
+              Contact DELVINTA
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="pb-20 md:pb-24">
+    <div class="delvinta-container">
+      <div class="delvinta-cta px-6 py-12 text-center sm:px-10 md:px-14 md:py-14">
+        <div class="relative z-10 mx-auto max-w-3xl">
+          <div class="delvinta-kicker">DELVINTA Technologies</div>
+
+          <h2 class="mt-4 text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl">
+            Connecting the laboratory to the technology behind it.
+          </h2>
+
+          <div class="mt-7">
+            <a
+              href="mailto:hello@delvinta.com"
+              class="delvinta-button bg-white text-[var(--delvinta-navy)] shadow-lg hover:bg-[var(--delvinta-light)]"
+            >
+              Email DELVINTA
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

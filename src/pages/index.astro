@@ -1,52 +1,38 @@
 ---
 import Layout from '~/layouts/Layout.astro';
-import '~/styles/delvinta.css';
-
-const integrationCapabilities = [
-  {
-    title: 'EPIC BEAKER',
-    items: 'Implementation · Conversion · Testing · Go-Live',
-  },
-  {
-    title: 'INTEGRATION',
-    items: 'Data Innovations · Instruments · Middleware · Automation',
-  },
-  {
-    title: 'OPTIMIZATION',
-    items: 'Support · Quality Control · Autoverification · Monitoring',
-  },
-];
-
-const lifecycle = ['Plan', 'Build', 'Integrate', 'Test', 'Go-Live', 'Stabilize', 'Support', 'Optimize'];
-
-const integrationLayer = ['Epic Beaker', 'Data Innovations', 'Instruments', 'Middleware', 'Automation'];
 ---
 
-<Layout>
+<Layout
+  metadata={{
+    title: 'DELVINTA Technologies | Laboratory Integration Specialists',
+    description:
+      'DELVINTA delivers laboratory integration solutions across Epic Beaker, Data Innovations, diagnostic instruments, middleware, automation, and laboratory systems.',
+  }}
+>
   <!-- HERO -->
-  <section class="delvinta-section relative overflow-hidden">
+  <section class="delvinta-section pt-16 md:pt-24">
     <div class="delvinta-container">
-      <div class="grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+      <div class="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div>
-          <p class="delvinta-eyebrow">Laboratory Integration &amp; Transformation</p>
+          <div class="delvinta-eyebrow">Laboratory Integration Specialists</div>
 
-          <h1 class="delvinta-heading mt-5 max-w-3xl">
+          <h1 class="delvinta-heading mt-6">
             Transforming the laboratory.
             <span class="delvinta-heading-subtitle block"> Delivering integration solutions. </span>
           </h1>
 
-          <p class="delvinta-body mt-6 max-w-2xl">
-            Specialized integration expertise for Epic Beaker, Data Innovations Instrument Manager, diagnostic
-            instruments, middleware, and laboratory automation.
+          <p class="delvinta-body mt-7">
+            Specialized integration expertise for Epic Beaker, Data Innovations, diagnostic instruments, middleware, and
+            laboratory automation.
           </p>
 
           <div class="mt-8">
-            <a href="#contact" class="delvinta-button delvinta-button-primary"> Talk to DELVINTA </a>
+            <a href="mailto:hello@delvinta.com" class="delvinta-button delvinta-button-primary"> Talk to DELVINTA </a>
           </div>
         </div>
 
         <!-- Integration Architecture -->
-        <div class="delvinta-network min-h-[360px]">
+        <div class="delvinta-network" aria-label="DELVINTA laboratory integration architecture">
           <div class="delvinta-node delvinta-node-laboratory">Laboratory</div>
 
           <div class="delvinta-node delvinta-node-delvinta">DELVINTA Integration</div>
@@ -65,75 +51,128 @@ const integrationLayer = ['Epic Beaker', 'Data Innovations', 'Instruments', 'Mid
     </div>
   </section>
 
-  <!-- LABORATORY INTEGRATION -->
-  <section class="delvinta-section bg-[var(--delvinta-light)]">
+  <!-- CAPABILITIES -->
+  <section class="delvinta-section pt-8 md:pt-16">
     <div class="delvinta-container">
       <div class="max-w-3xl">
-        <p class="delvinta-eyebrow">Laboratory Integration</p>
+        <div class="delvinta-eyebrow">Capabilities</div>
 
-        <h2 class="delvinta-heading-small mt-3">From implementation to optimization.</h2>
+        <h2 class="delvinta-heading-small mt-4">From implementation to optimization.</h2>
 
         <p class="delvinta-body mt-5">
           DELVINTA connects the systems, instruments, and workflows that keep the laboratory moving.
         </p>
       </div>
 
-      <!-- Compact capability rows -->
-      <div class="mt-10 border-t border-[var(--delvinta-border)]">
-        {
-          integrationCapabilities.map((capability) => (
-            <div class="grid gap-2 border-b border-[var(--delvinta-border)] py-5 sm:grid-cols-[180px_1fr] sm:items-center sm:gap-8">
-              <h3 class="text-sm font-bold tracking-widest text-[var(--delvinta-navy)]">{capability.title}</h3>
+      <div class="mt-10 divide-y divide-[var(--delvinta-border)] border-y border-[var(--delvinta-border)]">
+        <!-- Capability 1 -->
+        <div class="grid gap-3 py-6 md:grid-cols-[220px_1fr_auto] md:items-center md:gap-8">
+          <div class="text-lg font-semibold tracking-tight text-[var(--delvinta-navy)]">Epic Beaker</div>
 
-              <p class="text-sm leading-6 text-[var(--delvinta-slate)]">{capability.items}</p>
-            </div>
-          ))
-        }
+          <div class="text-sm leading-6 text-[var(--delvinta-slate)]">
+            Implementation · Conversion · Testing · Go-Live
+          </div>
+
+          <div class="hidden text-xl text-[var(--delvinta-cyan)] md:block" aria-hidden="true">→</div>
+        </div>
+
+        <!-- Capability 2 -->
+        <div class="grid gap-3 py-6 md:grid-cols-[220px_1fr_auto] md:items-center md:gap-8">
+          <div class="text-lg font-semibold tracking-tight text-[var(--delvinta-navy)]">Integration</div>
+
+          <div class="text-sm leading-6 text-[var(--delvinta-slate)]">
+            Data Innovations · Instruments · Middleware · Automation
+          </div>
+
+          <div class="hidden text-xl text-[var(--delvinta-cyan)] md:block" aria-hidden="true">→</div>
+        </div>
+
+        <!-- Capability 3 -->
+        <div class="grid gap-3 py-6 md:grid-cols-[220px_1fr_auto] md:items-center md:gap-8">
+          <div class="text-lg font-semibold tracking-tight text-[var(--delvinta-navy)]">Optimization</div>
+
+          <div class="text-sm leading-6 text-[var(--delvinta-slate)]">
+            Support · Quality Control · Autoverification · Monitoring
+          </div>
+
+          <div class="hidden text-xl text-[var(--delvinta-cyan)] md:block" aria-hidden="true">→</div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Integration lifecycle -->
-      <div class="mt-8">
-        <p class="text-xs font-semibold tracking-widest text-[var(--delvinta-teal)]">INTEGRATION LIFECYCLE</p>
+  <!-- LIFECYCLE -->
+  <section class="pb-20 pt-4 md:pb-24 md:pt-8">
+    <div class="delvinta-container">
+      <div class="delvinta-eyebrow">Implementation to Optimization</div>
 
-        <p class="mt-3 text-sm font-medium tracking-wide text-[var(--delvinta-slate)]">
-          {lifecycle.join(' → ')}
-        </p>
+      <div class="mt-6 overflow-x-auto pb-3">
+        <div class="flex min-w-max items-center gap-3 text-sm font-medium text-[var(--delvinta-slate)]">
+          <span class="text-[var(--delvinta-navy)]">Plan</span>
+          <span class="text-[var(--delvinta-cyan)]">→</span>
+
+          <span>Build</span>
+          <span class="text-[var(--delvinta-cyan)]">→</span>
+
+          <span>Integrate</span>
+          <span class="text-[var(--delvinta-cyan)]">→</span>
+
+          <span>Test</span>
+          <span class="text-[var(--delvinta-cyan)]">→</span>
+
+          <span>Go-Live</span>
+          <span class="text-[var(--delvinta-cyan)]">→</span>
+
+          <span>Stabilize</span>
+          <span class="text-[var(--delvinta-cyan)]">→</span>
+
+          <span>Support</span>
+          <span class="text-[var(--delvinta-cyan)]">→</span>
+
+          <span class="text-[var(--delvinta-navy)]">Optimize</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- TECHNICAL CENTERPIECE -->
-  <section class="relative overflow-hidden bg-[var(--delvinta-navy-deep)] py-20 text-white sm:py-24">
+  <section class="pb-20 md:pb-24">
     <div class="delvinta-container">
-      <div class="max-w-4xl">
-        <p class="delvinta-eyebrow text-[var(--delvinta-cyan)]">DELVINTA Integration</p>
+      <div class="delvinta-cta px-6 py-12 sm:px-10 md:px-14 md:py-16">
+        <div class="relative z-10 grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
+          <div>
+            <div class="delvinta-kicker">The DELVINTA Integration Layer</div>
 
-        <h2 class="mt-4 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
-          Connecting the laboratory to the systems that power it.
-        </h2>
+            <h2 class="mt-4 max-w-2xl text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl">
+              Connecting the laboratory to the systems that power it.
+            </h2>
 
-        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-          From implementation and integration through stabilization and optimization, we bring together laboratory
-          workflows, instruments, middleware, automation, and clinical systems through disciplined technical expertise.
-        </p>
+            <p class="mt-5 max-w-xl text-base leading-7 text-white/65">
+              We bring together laboratory workflows, instruments, middleware, automation, and clinical systems through
+              disciplined integration and technical expertise.
+            </p>
+          </div>
 
-        <!-- Capability line -->
-        <div class="mt-10 border-t border-white/10 pt-6">
-          <p class="text-xs font-semibold tracking-widest text-[var(--delvinta-cyan)]">CONNECTED TECHNOLOGY</p>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div class="rounded-xl border border-white/10 bg-white/[0.06] p-5">
+              <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/45">Clinical System</div>
+              <div class="mt-2 text-lg font-semibold text-white">Epic Beaker</div>
+            </div>
 
-          <div class="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm font-medium text-slate-200">
-            {
-              integrationLayer.map((item, index) => (
-                <>
-                  <span>{item}</span>
-                  {index < integrationLayer.length - 1 && (
-                    <span class="text-white/25" aria-hidden="true">
-                      ·
-                    </span>
-                  )}
-                </>
-              ))
-            }
+            <div class="rounded-xl border border-white/10 bg-white/[0.06] p-5">
+              <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/45">Middleware</div>
+              <div class="mt-2 text-lg font-semibold text-white">Data Innovations</div>
+            </div>
+
+            <div class="rounded-xl border border-white/10 bg-white/[0.06] p-5">
+              <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/45">Diagnostics</div>
+              <div class="mt-2 text-lg font-semibold text-white">Medical Instruments</div>
+            </div>
+
+            <div class="rounded-xl border border-white/10 bg-white/[0.06] p-5">
+              <div class="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/45">Automation</div>
+              <div class="mt-2 text-lg font-semibold text-white">Laboratory Automation</div>
+            </div>
           </div>
         </div>
       </div>
@@ -141,16 +180,18 @@ const integrationLayer = ['Epic Beaker', 'Data Innovations', 'Instruments', 'Mid
   </section>
 
   <!-- CTA -->
-  <section id="contact" class="delvinta-section">
+  <section class="delvinta-section border-t border-[var(--delvinta-border)]">
     <div class="delvinta-container">
-      <div class="mx-auto max-w-3xl text-center">
-        <p class="delvinta-eyebrow">Let's Talk</p>
+      <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
+        <div>
+          <div class="delvinta-eyebrow">Let&apos;s Talk</div>
 
-        <h2 class="delvinta-heading-small mt-3">Have a laboratory integration challenge?</h2>
+          <h2 class="delvinta-heading-small mt-4">Have a laboratory integration challenge?</h2>
 
-        <p class="delvinta-body mt-5">Implementation. Integration. Support. Optimization.</p>
+          <p class="delvinta-body mt-5">Implementation. Integration. Support. Optimization.</p>
+        </div>
 
-        <div class="mt-8">
+        <div>
           <a href="mailto:hello@delvinta.com" class="delvinta-button delvinta-button-primary"> Talk to DELVINTA </a>
         </div>
       </div>

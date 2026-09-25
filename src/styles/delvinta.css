@@ -1,5 +1,3 @@
-@import 'tailwindcss';
-
 :root {
   --delvinta-navy: #0b1f33;
   --delvinta-navy-deep: #071725;
@@ -147,6 +145,20 @@ body {
     transform 180ms ease,
     border-color 180ms ease,
     box-shadow 180ms ease;
+}
+
+.delvinta-capability-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--delvinta-border);
+  border-radius: 999px;
+  background: var(--delvinta-light);
+  color: var(--delvinta-slate);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .delvinta-card:hover {
